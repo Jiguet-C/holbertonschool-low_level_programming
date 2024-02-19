@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* Ecrire du texte */
+/**
+ * main - Entry point
+ * Description: 'Ecrire du texte'
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {

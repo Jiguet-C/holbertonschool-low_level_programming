@@ -1,8 +1,6 @@
-#ifndef MAIN
-#define MAIN
+#ifndef MAIN_H
+#define MAIN_H
 
-#define MESSAGE "_putchar"
-
-extern void fonction_0() 
+int _putchar(char c);
 
 #endif

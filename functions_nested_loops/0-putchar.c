@@ -1,13 +1,20 @@
-#include "_putchar.h"
+#include "main.h"
 /**
  * main - Entry point
  * Description: '_putchar
  * Return: Always 1 (Success)
  */
 
-int main(char c)
+int main(void)
 {
-	c = 'a';
-	_putchar(c);
-	return (-1);
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+	return (1);
 }

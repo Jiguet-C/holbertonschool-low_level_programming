@@ -18,7 +18,7 @@ void rev_string(char *s)
 
 	for (i = (nombreCaract - 1), nombreCaract = 0 ; i >= 0 ; i--, nombreCaract++)
 		temporaire[i] = s[nombreCaract];
-	
+
 	for (i = 0; i < nombreCaract; i++)
 		s[i] = temporaire[i];
 }

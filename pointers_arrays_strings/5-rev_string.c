@@ -10,7 +10,7 @@ void rev_string(char *s)
 {
 	int i;
 	int nombreCaract;
-	char temporaire[200];
+	char temporaire[500];
 
 	for (nombreCaract = 0 ; s[nombreCaract] != '\0' ; nombreCaract++)
 	{

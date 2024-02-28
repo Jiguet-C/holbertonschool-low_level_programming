@@ -9,17 +9,17 @@
 void puts_half(char *str)
 {
 	int i;
-	int nombreCaract;
+	int nbCaract;
 
-	for (nombreCaract = 0 ; str[nombreCaract] != '\0' ; nombreCaract++)
+	for (nbCaract = 0 ; str[nbCaract] != '\0' ; nbCaract++)
 	{
 	}
 
-	if ((nombreCaract % 2) == 0)
-		for (i = (nombreCaract / 2) ; i >= (nombreCaract / 2) && i <= nombreCaract ; i++)
+	if ((nbCaract % 2) == 0)
+		for (i = (nbCaract / 2) ; i >= (nbCaract / 2) && i < nbCaract ; i++)
 			_putchar(str[i]);
 	else
-		for (i = (nombreCaract / 2) ; i >= ((nombreCaract - 1) / 2) && i <= nombreCaract ; i++)
+		for (i = (nbCaract / 2) ; i >= ((nbCaract - 1) / 2) && i < nbCaract ; i++)
 			_putchar(str[i]);
 
 	_putchar('\n');

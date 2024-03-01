@@ -1,15 +1,11 @@
 #include "main.h"
 
 /**
-* _strlen - return string length
 * _strcat - concatenate 2 strings
-* @dest: string
-* @src: string
-* @s: string
-* Return: pointer to dest
+* @dest: string s1
+* @src: string s2
+* Return: string of dest
 */
-
-int _strlen(char *s);
 
 char *_strcat(char *dest, char *src)
 {
@@ -21,6 +17,12 @@ char *_strcat(char *dest, char *src)
 
 	return (dest);
 }
+
+/**
+* _strlen - return string length
+* @s: string
+* Return: number of caracters
+*/
 
 int _strlen(char *s)
 {

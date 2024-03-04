@@ -1,5 +1,5 @@
 #include "main.h"
-#define NULL 0
+#include <stddef.h>
 
 /**
 * _strchr - fills memory with a constant byte

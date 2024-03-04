@@ -1,4 +1,5 @@
 #include "main.h"
+#define NULL 0
 
 /**
 * _strchr - fills memory with a constant byte
@@ -16,5 +17,5 @@ char *_strchr(char *s, char c)
 		if (s[i] == c)
 			return (&s[i]);
 	}
-	return (0);
+	return (NULL);
 }

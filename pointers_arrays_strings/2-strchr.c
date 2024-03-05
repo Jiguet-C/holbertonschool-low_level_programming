@@ -1,20 +1,21 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
-* _strchr - fills memory with a constant byte
+* _strspn - gets the length of a prefix substring
 * @s: array to explore
-* @c: the character to find
+* @accept: the character to find
 * Return: pointer to adress of s or NULL
 */
 
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
+			return (&s[i]);
+		if (s[i] == '\0')
 			return (&s[i]);
 	}
 	return (NULL);

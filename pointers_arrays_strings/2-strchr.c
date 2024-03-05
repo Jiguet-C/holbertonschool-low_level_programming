@@ -1,13 +1,14 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
-* _strspn - gets the length of a prefix substring
+* _strchr - locates a character in a string
 * @s: array to explore
 * @accept: the character to find
 * Return: pointer to adress of s or NULL
 */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strchr(char *s, char c)
 {
 	int i;
 

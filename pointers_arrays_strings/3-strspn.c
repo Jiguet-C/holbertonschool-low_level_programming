@@ -16,6 +16,9 @@ unsigned int _strspn(char *s, char *accept)
 		i++;
 		s++;
 		accept++;
+
+		if (*s == ' ' && i > 0)
+			break;
 	}
 	return (i);
 }

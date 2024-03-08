@@ -9,5 +9,6 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	_putchar('a');
+	return (needle);
+	return (haystack);
 }

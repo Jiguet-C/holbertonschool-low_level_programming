@@ -35,9 +35,12 @@ char *_strdup(char *str)
 
 	size = _strlen(str) + 1;
 
+	if (str == NULL)
+		return (NULL);
+
 	buffer = malloc(sizeof(unsigned char) * size);
 
-	if (str == NULL || buffer == 0)
+	if (buffer == NULL)
 		return (NULL);
 
 	for (i = 0; i < size; i++)

@@ -37,8 +37,11 @@ char *str_concat(char *s1, char *s2)
 	unsigned int sizeAll;
 	char *buffer;
 
-	if (s1 == NULL || s2 == NULL)
-		return ("");
+	if (s1 == NULL)
+		s1 = '\0';
+
+	if (s2 == NULL)
+		s2 = '\0';
 
 	size1 = _strlen(s1);
 	size2 = _strlen(s2);

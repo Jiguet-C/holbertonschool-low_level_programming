@@ -37,11 +37,12 @@ char *_strdup(char *str)
 
 	buffer = malloc(sizeof(unsigned char) * size);
 
-	if (str == NULL || buffer == 0)
+	if (str == NULL || buffer == NULL)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
 		buffer[i] = str[i];
 
 	return (buffer);
+	free(buffer);
 }

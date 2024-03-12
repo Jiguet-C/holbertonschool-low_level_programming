@@ -37,7 +37,7 @@ char *_strdup(char *str)
 
 	buffer = malloc(sizeof(unsigned char) * size);
 
-	if (size == 0 || buffer == 0)
+	if (str == NULL || buffer == 0)
 		return (NULL);
 
 	for (i = 0; i < size; i++)

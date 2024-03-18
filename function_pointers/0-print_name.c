@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "function_pointers.h"
 
 /**
@@ -11,5 +10,6 @@
 
 void print_name(char *prm_ptr_name, void (*prm_ptr_function)(char *))
 {
-prm_ptr_function(prm_ptr_name);
+	if (prm_ptr_name != NULL || prm_ptr_function != NULL)
+		prm_ptr_function(prm_ptr_name);
 }

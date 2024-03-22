@@ -36,7 +36,8 @@ void print_all(const char * const format, ...)
 				ptr_string = va_arg(anything, char *);
 				if (ptr_string == NULL)
 					printf("(nil)");
-				printf("%s", ptr_string);
+				else
+					printf("%s", ptr_string);
 				break;
 		}
 		if ((c == 'c' || c == 'i' || c == 'f' || c == 's') && format[i + 1] != '\0')

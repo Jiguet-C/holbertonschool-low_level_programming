@@ -9,22 +9,22 @@
 
 void print_all(const char * const format, ...)
 {
-	int index;
-	char caract;
+	int i;
+	char c;
 	char *ptr_string;
 	va_list anything;
 
 	va_start(anything, format);
 
-	index = 0;
+	i = 0;
 
-	while (format && format[index])
+	while (format != NULL && format[i] != '\0')
 	{
-		caract = format[index];
-		switch (caract)
+		c = format[i];
+		switch (c)
 		{
-			case 'caract':
-				printf("%caract", va_arg(anything, int));
+			case 'c':
+				printf("%c", va_arg(anything, int));
 				break;
 			case 'i':
 				printf("%d", va_arg(anything, int));
@@ -39,10 +39,9 @@ void print_all(const char * const format, ...)
 				printf("%s", ptr_string);
 				break;
 		}
-		if ((caract == 'caract' || caract == 'i' || caract == 'f' ||
-		caract == 's') && format[index + 1] != '\0')
+		if ((c == 'c' || c == 'i' || c == 'f' || c == 's') && format[i + 1] != '\0')
 			printf(", ");
-		index++;
+		i++;
 	}
 	printf("\n");
 	va_end(anything);

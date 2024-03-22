@@ -1,48 +1,49 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - function that prints anything
- * @format: list of arguments passed to the function
+ * print_all - prints anything, followed by a new line
+ * @format: list of types of arguments
  *
- * Return: nothing
-*/
+ * Return: void
+ */
 
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int i = 0;
-	char c;
-	char *str;
+	unsigned int index;
+	char caracterFormat;
+	char *ptr_string;
+	va_list anything;
 
-	va_start(args, format);
+	va_start(anything, format);
 
-	while (format && format[i])
+	index = 0;
+
+	while (format && format[index])
 	{
-		c = format[i];
-		switch (c)
+		caracterFormat = format[index];
+		switch (caracterFormat)
 		{
 			case 'c':
-				printf("%c", va_arg(args, int));
+				printf("%c", va_arg(anything, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(args, int));
+				printf("%d", va_arg(anything, int));
 				break;
 			case 'f':
-				printf("%f", (float)va_arg(args, double));
+				printf("%f", (float)va_arg(anything, double));
 				break;
 			case 's':
-				str = va_arg(args, char *);
-				if (str == NULL)
-					str = "(nil)";
-				printf("%s", str);
-				break;
+				ptr_string = va_arg(anything, char *);
+				if (ptr_string == NULL)
+					printf("(nil)");
+				else
+					printf("%s", ptr_string);
 		}
-		if ((c == 'c' || c == 'i' || c == 'f' || c == 's') && format[i + 1] != '\0')
+		if ((caracterFormat == 'c' || caracterFormat == 'i' || caracterFormat == 'f'
+			|| caracterFormat == 's') && format[index + 1] != '\0')
 			printf(", ");
-		i++;
+		index++;
 	}
-
 	printf("\n");
-
-	va_end(args);
+	va_end(anything);
 }

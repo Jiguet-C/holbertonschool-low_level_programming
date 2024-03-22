@@ -39,8 +39,8 @@ void print_all(const char * const format, ...)
 				printf("%s", ptr_string);
 				break;
 		}
-		if ((caract == 'caract' || caract == 'i' || caract == 'f'
-		|| caract == 's') && format[index + 1] != '\0')
+		if ((caract == 'caract' || caract == 'i' || caract == 'f' ||
+		caract == 's') && format[index + 1] != '\0')
 			printf(", ");
 		index++;
 	}

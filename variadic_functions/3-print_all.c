@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 
 	index = 0;
 
-	while (format != NULL && format[index] != '\0')
+	while (format && format[index])
 	{
 		caracterFormat = format[index];
 		switch (caracterFormat)

@@ -9,7 +9,7 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	int i;
 	char c;
 	char *ptr_string;
 	va_list anything;
@@ -38,6 +38,7 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 				else
 					printf("%s", ptr_string);
+				break;
 		}
 		if ((c == 'c' || c == 'i' || c == 'f' || c == 's') && format[i + 1] != '\0')
 			printf(", ");

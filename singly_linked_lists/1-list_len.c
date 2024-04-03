@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - Print list
+ * list_len - length of linked list
  * @h: list_t list
  *
  * Return: number of elements in list_t list
